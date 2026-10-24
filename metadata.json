@@ -1,0 +1,8 @@
+{
+  "name": "VoiceSpace - Technology, Marketing \u0026 BPO Solutions",
+  "description": "VoiceSpace delivers professional software development, website and mobile engineering, digital marketing, SEO, customer support, and business process outsourcing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
