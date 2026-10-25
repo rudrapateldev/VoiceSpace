@@ -673,4 +673,689 @@ export const servicesData: Record<string, ServiceItem> = {
     ],
     pricingGuidance: 'Hourly bundles or dedicated full-time administrative staff available.',
   },
+  'ai-llm-rag': {
+    slug: 'ai-llm-rag',
+    title: 'AI, LLM & RAG Solutions',
+    shortDescription:
+      'Production-grade Retrieval-Augmented Generation (RAG), autonomous agents, custom fine-tuning, and enterprise AI workflows.',
+    metaTitle: 'AI, LLM & RAG Development Services | VoiceSpace India',
+    metaDescription:
+      'Engineer private, high-accuracy AI applications with RAG architectures, LangChain, vector databases (Pinecone, Chroma, pgvector), and custom LLM agent workflows.',
+    deliverables: [
+      'Retrieval-Augmented Generation (RAG) Architecture & Multi-Source Indexing',
+      'Vector Database Integration (Pinecone, ChromaDB, pgvector, Weaviate)',
+      'Autonomous Task-Executing AI Agents with External Tool & API Calling',
+      'Custom LLM Fine-Tuning & Parameter-Efficient Domain Adapters (LoRA)',
+      'Enterprise Knowledge Base Search Bots & Conversational Assistants',
+      'AI Evaluation Frameworks, Prompt Injection Hardening & Hallucination Guardrails',
+    ],
+    benefits: [
+      'Grounded domain answers with zero hallucinations using your proprietary knowledge base',
+      'Complete intellectual property privacy with optional on-premise or private VPC model hosting',
+      'Reduce customer service resolution times by up to 75% with intelligent automated triage',
+      'Seamless integration into existing Slack, web portals, CRMs, and internal databases',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Data & Knowledge Audit',
+        description: 'Analyze documents, databases, unstructured files, and define chunking schemas and embeddings.',
+      },
+      {
+        step: '02',
+        title: 'RAG Pipeline & Vector Indexing',
+        description: 'Construct vector storage pipelines with semantic hybrid search, rerankers, and retrieval benchmarks.',
+      },
+      {
+        step: '03',
+        title: 'Agent Tooling & Guardrails',
+        description: 'Implement system prompts, tool-calling handlers, rate limits, PII sanitization, and output guardrails.',
+      },
+      {
+        step: '04',
+        title: 'Deployment & Continuous Evaluation',
+        description: 'Deploy containerized inference endpoints with latency tracing, caching, and automated accuracy metrics.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which foundation models do you support?',
+        answer: 'We build with OpenAI (GPT-4o), Anthropic Claude 3.5, Google Gemini 1.5/2.0, as well as open-source weights (Llama 3, Mistral, DeepSeek) deployed on private GPUs.',
+      },
+      {
+        question: 'How do you prevent data leaks and hallucinations?',
+        answer: 'We employ multi-stage RAG with contextual rerankers, semantic distance thresholds, strict refusal prompting, and zero-retention enterprise API keys.',
+      },
+      {
+        question: 'Can the AI connect to our internal databases and Jira/Confluence?',
+        answer: 'Yes. We build bi-directional agents capable of querying SQL databases, fetching live tickets from Jira, reading Confluence pages, or creating tasks in Asana.',
+      },
+    ],
+    industries: ['Technology & SaaS', 'Financial Services', 'Healthcare Admin', 'E-Commerce', 'Professional Services'],
+    relatedServices: [
+      { title: 'Software Development', slug: 'software-development' },
+      { title: 'Business Analysis & Process Mapping', slug: 'business-analysis' },
+      { title: 'Software Testing & QA', slug: 'qa-software-testing' },
+    ],
+    pricingGuidance: 'Fixed sprint phases for initial RAG pipelines or dedicated monthly AI engineering pods.',
+  },
+  'game-development': {
+    slug: 'game-development',
+    title: 'Game Development (Unity & 3D)',
+    shortDescription:
+      'End-to-end 2D and 3D game engineering using Unity, cross-platform physics, multiplayer networking, and mobile performance optimization.',
+    metaTitle: 'Unity Game Development & Real-Time 3D Services | VoiceSpace India',
+    metaDescription:
+      'Expert Unity game development, gameplay programming, 2D/3D mobile games, WebGL spatial apps, multiplayer backend, and live operations.',
+    deliverables: [
+      'Cross-Platform Unity 2D & 3D Game Programming (iOS, Android, PC, WebGL)',
+      'Gameplay Physics, Controller Tuning & Custom Mechanics (C#)',
+      'Multiplayer Backend Architecture & State Synchronization (Photon, Mirror, WebSockets)',
+      'Mobile Performance Profiling (Draw-call batching, texture compression, 60 FPS target)',
+      'Shader Graph, Particle Effects (VFX) & Dynamic Lighting Optimization',
+      'In-App Purchases (IAP), Ad Mediation (Unity Ads, AdMob), and LiveOps Analytics',
+    ],
+    benefits: [
+      'Battle-tested C# architectural patterns with clean separation of logic and presentation',
+      'Optimized memory footprints ensuring crash-free performance across diverse mobile handsets',
+      'Complete production pipelines from initial prototype to Apple App Store & Google Play approval',
+      '100% intellectual property, Unity project files, and raw asset repository handover',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'GDD & Core Loop Prototyping',
+        description: 'Validate game design mechanics, controls, art bible, and target device specifications in a rapid playable greybox.',
+      },
+      {
+        step: '02',
+        title: 'Vertical Slice Build',
+        description: 'Complete one fully polished level/mode with finalized art, audio, UI, and performance profiling.',
+      },
+      {
+        step: '03',
+        title: 'Full Production & Systems',
+        description: 'Build out full level progressions, progression trees, monetization hooks, and audio integrations.',
+      },
+      {
+        step: '04',
+        title: 'Release QA & Store Launch',
+        description: 'Rigorous device regression matrix, store compliance audits, build signing, and post-launch telemetry.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you work in 2D, 3D, or both?',
+        answer: 'We engineer both high-speed 2D arcade/casual mobile titles and rich 3D isometric, top-down, and first-person experiences.',
+      },
+      {
+        question: 'Can you port an existing game to WebGL or mobile?',
+        answer: 'Yes. We specialize in cross-platform porting, re-engineering input systems for touch screens, and optimizing shaders for browser WebGL memory caps.',
+      },
+      {
+        question: 'Do you assist with store compliance and publishing?',
+        answer: 'Yes, our engineers handle provisioning profiles, bundle IDs, Google Play App Bundles (AAB), privacy policies, and in-app purchase validation.',
+      },
+    ],
+    industries: ['Mobile Gaming', 'Interactive E-Learning', 'E-Commerce 3D Product Demos', 'Digital Entertainment'],
+    relatedServices: [
+      { title: 'Mobile App Development', slug: 'mobile-app-development' },
+      { title: 'Software Testing & QA', slug: 'qa-software-testing' },
+      { title: 'Product Management & UX Strategy', slug: 'product-management' },
+    ],
+    pricingGuidance: 'Milestone-based vertical slice contracts or dedicated Unity developer retainers.',
+  },
+  'qa-software-testing': {
+    slug: 'qa-software-testing',
+    title: 'Software Testing & QA (Automation, Security & Performance)',
+    shortDescription:
+      'Comprehensive QA services spanning automated regression, concurrent load testing, OWASP security assessments, and multi-device manual testing.',
+    metaTitle: 'Software Testing & QA Services (Automation, Security & Performance) | VoiceSpace India',
+    metaDescription:
+      'Enterprise software testing, Playwright & Cypress E2E automation, Selenium, JMeter performance testing, OWASP security audits, and multi-device manual QA.',
+    deliverables: [
+      'Automated UI & End-to-End Regression Suites (Playwright, Cypress, Selenium)',
+      'API Automation & Integration Testing Frameworks (Postman, REST-Assured, Newman)',
+      'Performance, Concurrency & High-Load Stress Testing (JMeter, k6, Locust)',
+      'Security Audits & Vulnerability Assessments (OWASP Top 10, ZAP, Dependency Scans)',
+      'Exploratory, Functional & Usability Manual Passes Across 50+ Real Device Matrix',
+      'Continuous Integration Testing Gates (GitHub Actions, GitLab CI, Jenkins)',
+    ],
+    benefits: [
+      'Eliminate critical release bugs before they impact high-value production end users',
+      'Slash regression testing cycle time from days to minutes with self-healing automated suites',
+      'Identify and remediate security vulnerabilities before malicious exploitation',
+      'Actionable defect reports with reproduction steps, network traces, and video logs',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Test Strategy & Coverage Matrix',
+        description: 'Map user journeys, edge cases, system thresholds, browser targets, and regulatory standards.',
+      },
+      {
+        step: '02',
+        title: 'Automation Framework Architecture',
+        description: 'Engineer maintainable Page Object Model (POM) automation pipelines with parallel cloud execution.',
+      },
+      {
+        step: '03',
+        title: 'Security & Performance Benchmarking',
+        description: 'Run load simulation spikes, latency profiling, authentication audits, and injection test vectors.',
+      },
+      {
+        step: '04',
+        title: 'CI/CD Pipeline Gatekeeping',
+        description: 'Embed automated test suites into pull request checks with instant Slack and Jira failure reporting.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which test automation frameworks do you recommend?',
+        answer: 'We primarily engineer automation using Playwright (TypeScript/Python) and Cypress for web apps, Appium for native mobile, and Postman/k6 for backend APIs.',
+      },
+      {
+        question: 'Can you augment our existing engineering sprints?',
+        answer: 'Yes. Our QA engineers embed directly into your Jira/Slack/GitHub cadence, writing test specs alongside developers during active sprint cycles.',
+      },
+      {
+        question: 'What performance testing metrics do you report?',
+        answer: 'We measure throughput (RPS), percentile response times (p95, p99), error rates, database connection saturation, and memory leak thresholds under concurrency.',
+      },
+    ],
+    industries: ['Technology & SaaS', 'Financial Services', 'E-Commerce & Retail', 'Healthcare Admin', 'Gaming'],
+    relatedServices: [
+      { title: 'Software Development', slug: 'software-development' },
+      { title: 'AI, LLM & RAG Solutions', slug: 'ai-llm-rag' },
+      { title: 'Project Management & Agile Delivery', slug: 'project-management' },
+    ],
+    pricingGuidance: 'Dedicated monthly QA engineers (Automation, Manual, or Security) or scoped fixed-price test suites.',
+  },
+  'product-management': {
+    slug: 'product-management',
+    title: 'Product Management & UX Strategy',
+    shortDescription:
+      'Strategic product discovery, customer research, feature prioritization, roadmapping, and metrics-driven growth using Mixpanel and Miro.',
+    metaTitle: 'Product Management & UX Strategy Consulting | VoiceSpace India',
+    metaDescription:
+      'Transform ideas into validated digital products. Product discovery, RICE prioritization, PRDs, Miro user mapping, and Mixpanel analytics.',
+    deliverables: [
+      'Product Discovery, Competitive Benchmarking & Market Gap Analysis',
+      'Living Product Requirements Documents (PRDs) & Acceptance Criteria',
+      'User Story Mapping & Interactive Customer Journey Blueprinting (Miro)',
+      'Feature Prioritization Frameworks (RICE, MoSCoW, Kano Models)',
+      'Quantitative Product Telemetry & Funnel Tracking Taxonomy (Mixpanel, GA4)',
+      'Go-To-Market (GTM) Strategy, User Onboarding Flows & Continuous Discovery Loops',
+    ],
+    benefits: [
+      'Prevent costly engineering rework by validating customer problems before writing code',
+      'Laser focus engineering capacity on features that directly move revenue and retention KPIs',
+      'Create transparent, visual stakeholder consensus across founders, engineering, and sales',
+      'Data-driven decision making powered by rigorous cohort retention and conversion funnels',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Discovery & User Research',
+        description: 'Conduct qualitative stakeholder interviews, user session audits, and competitor capability mapping.',
+      },
+      {
+        step: '02',
+        title: 'Story Mapping & Prioritization',
+        description: 'Facilitate Miro visual story mapping to define the true minimum lovable product (MLP) scope.',
+      },
+      {
+        step: '03',
+        title: 'PRD & Backlog Architecture',
+        description: 'Author rigorous technical specifications, wireframe flows, edge-case definitions, and acceptance criteria.',
+      },
+      {
+        step: '04',
+        title: 'Launch Telemetry & Iteration',
+        description: 'Instrument event analytics in Mixpanel/GA4 to measure post-launch adoption and drive sprint iteration.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do you collaborate with our technical founders or internal engineers?',
+        answer: 'Our product managers bridge vision and execution—handling requirements grooming, user testing, and sprint priority trade-offs in Jira and Confluence.',
+      },
+      {
+        question: 'Which product tools do your PMs work with?',
+        answer: 'We are fluent in Miro, Jira, Confluence, Asana, Monday.com, Figma, Mixpanel, and Google Analytics.',
+      },
+      {
+        question: 'Can you help us build a Go-To-Market (GTM) plan for an upcoming release?',
+        answer: 'Yes. We craft onboarding walkthroughs, feature release notes, pricing tier experiments, and marketing alignment briefs.',
+      },
+    ],
+    industries: ['Early-Stage Startups', 'Growth-Stage SaaS', 'E-Commerce Brands', 'Enterprise Platforms'],
+    relatedServices: [
+      { title: 'Project Management & Agile Delivery', slug: 'project-management' },
+      { title: 'Business Analysis & Process Mapping', slug: 'business-analysis' },
+      { title: 'Software Development', slug: 'software-development' },
+    ],
+    pricingGuidance: 'Fractional Head of Product retainers or fixed discovery and roadmapping sprints.',
+  },
+  'project-management': {
+    slug: 'project-management',
+    title: 'Project Management & Agile Delivery',
+    shortDescription:
+      'Rigorous Agile execution, sprint planning, and cross-functional delivery leadership powered by Jira, Confluence, Asana, and Monday.com.',
+    metaTitle: 'Agile Project Management & Delivery Services | VoiceSpace India',
+    metaDescription:
+      'Deliver complex software and transformation initiatives on time and within budget. Certified Scrum Masters and Agile delivery leads using Jira, Confluence, Asana, and Monday.com.',
+    deliverables: [
+      'Agile Scrum & Kanban Board Architecture (Jira Software, Asana, Monday.com)',
+      'Sprint Ceremonies: Backlog Grooming, Sprint Planning, Standups & Retrospectives',
+      'Velocity Forecasting, Sprint Burn-Down & Milestone Completion Dashboards',
+      'Cross-Team Dependency Management, Risk Registers & Mitigation Escalation',
+      'Confluence Knowledge Hub Architecture & Architectural Decision Records (ADRs)',
+      'Executive Status Reporting & Budget Burn Telemetry for Stakeholders',
+    ],
+    benefits: [
+      'Eliminate chaotic sprint churn and missed deadlines with predictable delivery cadences',
+      'Clear transparent transparency on who is working on what, blockages, and remaining effort',
+      'Maintain continuous team momentum and shield engineers from unstructured context-switching',
+      'Proven frameworks implemented in Jira and Asana tailored specifically to your team size',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Workflow & Tool Assessment',
+        description: 'Audit existing boards, release cadences, ticketing hygiene, and team velocity metrics.',
+      },
+      {
+        step: '02',
+        title: 'Cadence & Board Configuration',
+        description: 'Configure standardized Jira/Asana workflows, issue types, WIP limits, and custom automation rules.',
+      },
+      {
+        step: '03',
+        title: 'Active Sprint Leadership',
+        description: 'Lead daily unblocking standups, grooming sessions, story sizing, and sprint goal commitments.',
+      },
+      {
+        step: '04',
+        title: 'Review & Continuous Optimization',
+        description: 'Deliver bi-weekly executive progress summaries, retrospective action items, and velocity improvements.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which project management tools can you configure and manage?',
+        answer: 'We manage full setups in Jira Software, Confluence, Asana, Monday.com, ClickUp, Trello, and Notion.',
+      },
+      {
+        question: 'Do you provide certified Scrum Masters or Agile Delivery Leads?',
+        answer: 'Yes. Our project leads are seasoned practitioners with deep experience orchestrating engineering and operational teams.',
+      },
+      {
+        question: 'Can you rescue a project that is currently behind schedule?',
+        answer: 'Yes. We conduct rapid critical-path triage, eliminate scope creep, realign sprint priorities, and restore delivery predictability.',
+      },
+    ],
+    industries: ['Enterprise IT', 'Custom Software Development', 'Digital Agencies', 'Cross-Border Teams'],
+    relatedServices: [
+      { title: 'Product Management & UX Strategy', slug: 'product-management' },
+      { title: 'Business Analysis & Process Mapping', slug: 'business-analysis' },
+      { title: 'Software Testing & QA', slug: 'qa-software-testing' },
+    ],
+    pricingGuidance: 'Dedicated monthly delivery manager retainers or fractional project leadership pods.',
+  },
+  'business-analysis': {
+    slug: 'business-analysis',
+    title: 'Business Analysis & Process Mapping',
+    shortDescription:
+      'Translating complex business operations into precise technical specifications, BPMN 2.0 process flows, and Power BI dashboards.',
+    metaTitle: 'Business Analysis & Process Engineering Services | VoiceSpace India',
+    metaDescription:
+      'Bridge the gap between business stakeholders and technical developers. Detailed BRDs, user stories with acceptance criteria, BPMN 2.0 flows, and Power BI analytics.',
+    deliverables: [
+      'Business Requirements Documents (BRD) & Functional Requirement Specs (FRS)',
+      'BPMN 2.0 Process Workflow Maps & Operational Swimlane Diagrams (Miro, Visio)',
+      'User Stories with Detailed Gherkin (Given-When-Then) Acceptance Criteria',
+      'System Integration Flowcharts, Data Entity Schemas & API Data Dictionaries',
+      'Gap Analysis, Operational Bottleneck Identification & Automation Feasibility Studies',
+      'Microsoft Power BI & Zoho Analytics KPI Dashboard Architecture',
+    ],
+    benefits: [
+      'Eliminate developer guesswork with unambiguous, developer-ready functional specs',
+      'Identify hidden operational redundancies and manual bottlenecks before automating',
+      'Ensure 100% traceability from top-level business ROI down to individual pull requests',
+      'Visual process diagrams that any non-technical executive or team manager can validate',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Stakeholder Elicitation',
+        description: 'Conduct structured interviews with executives, department heads, and end users to map realities.',
+      },
+      {
+        step: '02',
+        title: 'As-Is vs. To-Be Modeling',
+        description: 'Map current bottlenecks and architect target optimized workflows in Miro using BPMN standards.',
+      },
+      {
+        step: '03',
+        title: 'Specification Authoring',
+        description: 'Document functional specs, edge-case tables, data schemas, validation rules, and acceptance tests.',
+      },
+      {
+        step: '04',
+        title: 'Developer Handover & UAT',
+        description: 'Facilitate engineering kickoff, assist throughout sprint build, and orchestrate user acceptance testing.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is the format of your deliverables?',
+        answer: 'We provide structured Confluence spaces, exported interactive PDFs, Miro interactive boards, and Jira ticket backlogs.',
+      },
+      {
+        question: 'Can you help bridge the gap between our business leaders and external dev teams?',
+        answer: 'Yes. Our business analysts act as the technical translator, ensuring business requirements are faithfully implemented in code.',
+      },
+      {
+        question: 'Do you also build reporting and analytics dashboards?',
+        answer: 'Yes. We architect Microsoft Power BI, Zoho Analytics, and Mixpanel dashboards to visualize the key metrics defined in the analysis.',
+      },
+    ],
+    industries: ['Logistics & Supply Chain', 'Healthcare Administration', 'Finance & Banking Support', 'Retail & E-Commerce'],
+    relatedServices: [
+      { title: 'Product Management & UX Strategy', slug: 'product-management' },
+      { title: 'Project Management & Agile Delivery', slug: 'project-management' },
+      { title: 'Software Development', slug: 'software-development' },
+    ],
+    pricingGuidance: 'Fixed scoping projects or embedded business analyst staff augmentation.',
+  },
+  'ui-ux-graphic-design': {
+    slug: 'ui-ux-graphic-design',
+    title: 'UI/UX & Graphic Design',
+    shortDescription:
+      'High-conversion UI/UX design systems in Figma, interactive prototypes, user journey wireframes, and complete brand graphic assets.',
+    metaTitle: 'UI/UX & Graphic Design Services | Figma & Branding | VoiceSpace India',
+    metaDescription:
+      'Transform complex software into intuitive experiences. Figma UI/UX design, mobile & web design systems, interactive clickable prototypes, and corporate graphic branding.',
+    deliverables: [
+      'Interactive Figma Prototypes & User Flow Wireframes',
+      'Scalable Design Systems & Atomic Component Token Libraries',
+      'High-Fidelity Mobile App (iOS/Android) & Web Platform Interfaces',
+      'Brand Visual Identity: Logos, Typography Rules & Color Palettes',
+      'Marketing Graphics, Social Media Creative Packs & Display Ad Assets',
+      'Usability Audits, WCAG 2.1 AA Accessibility Testing & Developer Handoff',
+    ],
+    benefits: [
+      'Accelerate development velocity with clean Figma tokens and auto-layout auto-handoffs',
+      'Dramatically improve user activation and retention by eliminating UX friction points',
+      'Consistent, cohesive visual branding across marketing landing pages and core products',
+      '100% full Figma project file, vector SVG, and asset export ownership',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'User Research & Wireframing',
+        description: 'Map information architecture, user mental models, and low-fidelity structural wireframes in Miro and Figma.',
+      },
+      {
+        step: '02',
+        title: 'Design System & UI Styling',
+        description: 'Establish design tokens, typography scale, accessible contrast ratios, and component states.',
+      },
+      {
+        step: '03',
+        title: 'High-Fidelity Prototyping',
+        description: 'Build micro-interactions, responsive screens, and testable clickable prototype walkthroughs.',
+      },
+      {
+        step: '04',
+        title: 'Developer Handoff & QA Audit',
+        description: 'Deliver inspectable specs, asset exports, Tailwind/CSS variables, and conduct design QA reviews.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you design in Figma?',
+        answer: 'Yes, we use Figma as our primary design platform with auto-layout, components, variants, and variables for seamless engineering handoff.',
+      },
+      {
+        question: 'Can you redesign an existing software product without rebuilding everything from scratch?',
+        answer: 'Yes. We conduct UX gap audits, refine confusing workflows, and provide incremental component redesigns that your dev team can roll out smoothly.',
+      },
+      {
+        question: 'Do you create commercial vector graphics and marketing collateral?',
+        answer: 'Yes. Our graphic design team crafts vector illustrations, product pitch deck slides, promotional banners, and social media creative assets.',
+      },
+    ],
+    industries: ['SaaS & Web Apps', 'E-Commerce Storefronts', 'Mobile Apps', 'Corporate Portals'],
+    relatedServices: [
+      { title: 'Video Creation & Motion Graphics', slug: 'video-creation-editing' },
+      { title: 'Product Management & UX Strategy', slug: 'product-management' },
+      { title: 'Website Development', slug: 'web-development' },
+    ],
+    pricingGuidance: 'Project milestone design sprints or dedicated monthly UI/UX design retainers.',
+  },
+  'video-creation-editing': {
+    slug: 'video-creation-editing',
+    title: 'Video Creation & Motion Graphics',
+    shortDescription:
+      'Professional software product walkthroughs, 2D/3D motion graphics, corporate explainer videos, and social video editing.',
+    metaTitle: 'Corporate Video Creation & Editing Services | VoiceSpace India',
+    metaDescription:
+      'Captivate audiences with high-definition product walkthroughs, corporate explainers, motion graphics, and social video editing using Premiere Pro and After Effects.',
+    deliverables: [
+      'High-Definition SaaS Product Walkthrough & Feature Demo Videos',
+      '2D & 3D Motion Graphics, Animated Title Sequences & Logo Reveals',
+      'Corporate Explainer Videos with Scriptwriting & Professional Voiceover',
+      'Short-Form Video Production (YouTube Shorts, LinkedIn Clips, Reels)',
+      'Video Color Grading, Audio Mastering, Noise Removal & Sound Design',
+      'Multi-Format Exports Optimized for Web, Social, YouTube, and Ad Campaigns',
+    ],
+    benefits: [
+      'Increase SaaS conversion rates by up to 80% with clear, concise 60-second product demo videos',
+      'Professional Adobe Premiere Pro and After Effects workflows delivering broadcast-quality polish',
+      'Full scriptwriting, storyboard generation, visual editing, and royalty-free audio licensing',
+      'Rapid turnaround times with structured revision rounds and master project file handovers',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Scriptwriting & Storyboard',
+        description: 'Craft high-converting narrative hooks, key value proposition beats, and visual scene boards.',
+      },
+      {
+        step: '02',
+        title: 'Screen Recording & Asset Creation',
+        description: 'Capture crisp 4K product screens, design custom motion graphics, and record studio-grade voiceovers.',
+      },
+      {
+        step: '03',
+        title: 'Editing & Motion Design',
+        description: 'Assemble visual cuts, smooth zoom transitions, animated callouts, and rhythmic sound design.',
+      },
+      {
+        step: '04',
+        title: 'Review & Multi-Channel Render',
+        description: 'Collect timestamped feedback, execute polish passes, and render multi-resolution optimized video masters.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What video editing software do you use?',
+        answer: 'Our video creators work primarily in Adobe Premiere Pro, After Effects, DaVinci Resolve, and Blender for 3D motion assets.',
+      },
+      {
+        question: 'Can you provide professional voiceover and sound effects?',
+        answer: 'Yes. We provide native multilingual voiceovers (US/UK/International accents), licensing, custom sound effects, and mixed audio stems.',
+      },
+      {
+        question: 'How long does a typical product explainer video take?',
+        answer: 'Standard 60–90 second explainer or demo videos typically take 5–8 business days from initial storyboard approval to finalized master delivery.',
+      },
+    ],
+    industries: ['Tech & SaaS Marketing', 'Mobile Apps', 'E-Commerce Brands', 'Corporate Communications'],
+    relatedServices: [
+      { title: 'UI/UX & Graphic Design', slug: 'ui-ux-graphic-design' },
+      { title: 'Digital Marketing', slug: 'digital-marketing' },
+      { title: 'Game Development (Unity & 3D)', slug: 'game-development' },
+    ],
+    pricingGuidance: 'Per-video packages or monthly recurring video editing subscriptions.',
+  },
+  'cloud-devops-security': {
+    slug: 'cloud-devops-security',
+    title: 'Cloud Infrastructure & DevOps',
+    shortDescription:
+      'Robust cloud architecture on AWS & Azure, automated CI/CD pipelines, Docker containerization, Kubernetes, and cyber security hardening.',
+    metaTitle: 'Cloud Architecture, DevOps & Cyber Security Services | VoiceSpace India',
+    metaDescription:
+      'Scale your infrastructure with confidence. AWS/Azure cloud architecture, Terraform IaC, Docker/Kubernetes container orchestration, CI/CD automation, and SOC2/ISO compliance.',
+    deliverables: [
+      'Cloud Architecture Design & Migration (AWS, Google Cloud, Azure)',
+      'Infrastructure as Code (IaC) using Terraform, CloudFormation & Ansible',
+      'Automated CI/CD Delivery Pipelines (GitHub Actions, GitLab CI, Jenkins)',
+      'Container Orchestration (Docker, Kubernetes / EKS / GKE, ECS)',
+      '24/7 Monitoring, Telemetry & Logging (CloudWatch, Datadog, Grafana, Prometheus)',
+      'Cloud Security Hardening, Zero-Trust IAM, KMS Encryption & Disaster Recovery',
+    ],
+    benefits: [
+      'Eliminate manual deployment errors with automated, immutable CI/CD deployment pipelines',
+      'Optimize cloud hosting costs by up to 40% with right-sizing, spot fleets, and auto-scaling',
+      'Achieve high-availability 99.99% uptime with multi-AZ failovers and automated backups',
+      'Meet rigorous SOC2, HIPAA, and ISO/IEC 27001 data compliance benchmarks',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Infrastructure & Security Audit',
+        description: 'Examine current network topologies, cloud expenditures, security vulnerabilities, and deployment bottlenecks.',
+      },
+      {
+        step: '02',
+        title: 'Architecture Blueprint & IaC',
+        description: 'Architect scalable VPCs, IAM policies, and provision infrastructure automatically via Terraform.',
+      },
+      {
+        step: '03',
+        title: 'CI/CD & Containerization',
+        description: 'Containerize microservices with Docker, configure zero-downtime rolling deploys, and automated test checks.',
+      },
+      {
+        step: '04',
+        title: 'Observability & SLA Support',
+        description: 'Deploy real-time alerting, centralized log streaming, disaster recovery failover drills, and runbooks.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which cloud providers do you support?',
+        answer: 'We specialize in AWS (Amplify, ECS, EKS, RDS, S3, CloudFront), Google Cloud Platform (Cloud Run, GKE), and Microsoft Azure.',
+      },
+      {
+        question: 'Can you help us reduce our monthly AWS bill?',
+        answer: 'Yes. Our FinOps audits typically identify 25%–40% in immediate savings through reserved instances, zombie volume cleanup, and caching optimization.',
+      },
+      {
+        question: 'How do you handle zero-downtime releases?',
+        answer: 'We implement blue/green deployments, canary releases, and health-check gatekeeping to guarantee zero client-facing downtime.',
+      },
+    ],
+    industries: ['SaaS Platforms', 'Fintech & Banking', 'High-Traffic E-Commerce', 'Healthcare Technology'],
+    relatedServices: [
+      { title: 'Software Development', slug: 'software-development' },
+      { title: 'Software Testing & QA', slug: 'qa-software-testing' },
+      { title: 'AI, LLM & RAG Solutions', slug: 'ai-llm-rag' },
+    ],
+    pricingGuidance: 'Monthly managed cloud retainers or fixed-scope infrastructure migration contracts.',
+  },
+  'india-business-entry': {
+    slug: 'india-business-entry',
+    title: 'India Business Entry & Local Head Office',
+    shortDescription:
+      'End-to-end company establishment, corporate representation, local head office hosting, product sales launch, and consumer trust building in India for international founders and foreign brands.',
+    metaTitle: 'India Business Entry & Local Head Office Representation | VoiceSpace India',
+    metaDescription:
+      'Establish your business in India with VoiceSpace. Complete company incorporation, MCA/GST/FEMA compliances, physical head office representation, product distribution, and local Indian customer trust building.',
+    deliverables: [
+      'Complete Indian Company Incorporation (Wholly-Owned Subsidiary, Branch or Liaison Office)',
+      'Statutory Regulatory Compliances (MCA, ROC, PAN, TAN, GST & Import Export Code - IEC)',
+      'Physical Registered Head Office & Operating Headquarters in Delhi-NCR (Faridabad, Haryana)',
+      'Local Banking, Multi-Currency Accounts & RBI/FEMA Foreign Direct Investment (FDI) Filings',
+      'Omnichannel Indian Customer Support (+91 Local Phone, WhatsApp Business, Hindi/English Desk)',
+      'Product Sales Launch & Indian Marketplace Onboarding (Amazon India, Flipkart, ONDC, D2C)',
+      'Local Payment Gateway Integration (UPI, Google Pay, PhonePe, Razorpay, Cash on Delivery)',
+      'Consumer Trust & Warranty Operations (Local Returns, RMA Management, Indian Customer Credibility)',
+    ],
+    benefits: [
+      'Zero friction entry into the world’s fastest growing 1.4B+ consumer market without overseas travel',
+      'Immediate consumer trust: Indian buyers purchase confidently from brands with a verified Indian entity & local support',
+      'Complete regulatory protection: strict compliance with Indian corporate laws, GST, and RBI/FEMA regulations',
+      'Physical executive head office infrastructure providing legitimate presence, meeting spaces, and mail management',
+      'Turnkey operational readiness: customer care, product logistics, returns, and sales active in weeks, not months',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Entity Structuring & Regulatory Filing',
+        description:
+          'Determine the optimal corporate vehicle (Wholly Owned Subsidiary, Branch, or LLP), obtain Director Identification Numbers (DIN) and Digital Signatures (DSC), and file Ministry of Corporate Affairs (MCA) incorporation.',
+      },
+      {
+        step: '02',
+        title: 'Head Office & Banking Establishment',
+        description:
+          'Assign your registered corporate operating address at VoiceSpace Delhi-NCR facility, open multi-currency corporate bank accounts with leading Indian banks, and complete RBI/FEMA inward remittance reporting.',
+      },
+      {
+        step: '03',
+        title: 'Product Onboarding & Market Integration',
+        description:
+          'Secure Import Export Code (IEC) and GST registrations, onboard your catalog to Amazon.in, Flipkart, and custom D2C stores, and integrate localized Indian payment gateways with UPI (Google Pay, PhonePe, Paytm).',
+      },
+      {
+        step: '04',
+        title: 'Customer Trust Hub & Ongoing Operations',
+        description:
+          'Deploy dedicated +91 phone lines, verified WhatsApp Business support, domestic warranty/return handling, and continuous Indian regulatory, tax, and GST filing governance.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can a foreign citizen or overseas company own 100% of an Indian business?',
+        answer:
+          'Yes. Under the Government of India’s foreign direct investment (FDI) policy, most sectors—including technology, e-commerce marketplace, manufacturing, consulting, and software—allow 100% foreign equity ownership under the Automatic Route with straightforward reporting to the Reserve Bank of India (RBI).',
+      },
+      {
+        question: 'How does VoiceSpace act as our Head Office in India?',
+        answer:
+          'VoiceSpace provides a legitimate corporate headquarters address at our operating facility in Faridabad (Delhi-NCR, Haryana). We manage your statutory registered office signage, official government correspondence, physical board meeting rooms, local landline and toll-free telephone systems, and dedicated bilingual support personnel operating directly under your brand name.',
+      },
+      {
+        question: 'How do you help international brands sell products in India?',
+        answer:
+          'We handle the full commercial pipeline: obtaining your Import Export Code (IEC), registering your brand on Amazon India, Flipkart, and ONDC, integrating high-converting Indian payment gateways (UPI, NetBanking, RuPay, Cash on Delivery), and coordinating domestic warehousing and last-mile logistics with trusted partners.',
+      },
+      {
+        question: 'Why is a local Indian presence critical to building consumer trust?',
+        answer:
+          'Indian consumers hesitate to buy from overseas websites due to fear of customs duties, lack of easy returns, and no local customer assistance. Having an authentic Indian entity, localized +91 phone and WhatsApp support, instant UPI payment options, and domestic return handling instantly bridges the trust gap and dramatically elevates conversion rates.',
+      },
+    ],
+    industries: [
+      'Global E-Commerce & Consumer Brands',
+      'Overseas SaaS & Software Companies',
+      'Consumer Electronics & Hardware',
+      'Industrial & Manufacturing Exporters',
+      'Healthcare, Wellness & D2C Brands',
+      'International Consulting & EdTech',
+    ],
+    relatedServices: [
+      { title: 'Customer Support Services', slug: 'customer-support' },
+      { title: 'Business Process Outsourcing (BPO)', slug: 'bpo' },
+      { title: 'Website Development', slug: 'web-development' },
+      { title: 'Digital Marketing', slug: 'digital-marketing' },
+    ],
+    pricingGuidance: 'Fixed incorporation and statutory setup packages plus flexible monthly head office & operational retainers.',
+  },
 };
+
+

@@ -2,16 +2,24 @@ import { BlogPost, IndustryItem } from '../types';
 
 export const SITE_CONFIG = {
   name: 'VoiceSpace',
-  legalName: 'VoiceSpace Solutions Private Limited',
+  legalName: 'VoiceSpace India Private Limited',
   url: 'https://voicespace.in',
   logo: '/assets/aistudio/VoiceSpace_Gradient_Logo_ec9da38b.png',
   description:
     'VoiceSpace delivers end-to-end technology solutions, custom software engineering, digital marketing pipelines, dedicated customer support, and BPO operations for growing businesses worldwide.',
   email: 'contact@voicespace.in',
   inquiriesEmail: 'inquiries@voicespace.in',
-  phoneDisplay: '+91 (080) 4120-7890 / +1 (800) 512-8920',
-  locationDisplay: 'Bengaluru, India (Operations HQ) & Remote Client Hubs (US & UK)',
-  operatingHours: 'Monday – Friday, 9:00 AM – 7:00 PM IST (24/7 Operations for Managed BPO)',
+  phoneDisplay: '+91 9289590900 / +91 9452508443',
+  phoneNumbers: ['+91 9289590900', '+91 9452508443'],
+  locationDisplay: '3373, Sector 56, Faridabad, Haryana, India 121004',
+  address: {
+    street: '3373, Sector 56',
+    city: 'Faridabad',
+    state: 'Haryana',
+    country: 'India',
+    postalCode: '121004',
+  },
+  operatingHours: 'Monday – Saturday, 9:00 AM – 7:00 PM IST (24/7 Operations for Managed BPO)',
   awsStack: {
     hosting: 'AWS Amplify Hosting (Next.js SSR / Static CDN)',
     database: 'Amazon RDS (PostgreSQL Engine)',
@@ -22,17 +30,318 @@ export const SITE_CONFIG = {
 };
 
 export const SERVICES_LIST = [
+  { slug: 'ai-llm-rag', title: 'AI, LLM & RAG Solutions', category: 'Technology' },
   { slug: 'software-development', title: 'Software Development', category: 'Technology' },
   { slug: 'web-development', title: 'Website Development', category: 'Technology' },
   { slug: 'mobile-app-development', title: 'Mobile App Development', category: 'Technology' },
+  { slug: 'game-development', title: 'Game Development (Unity & 3D)', category: 'Technology' },
+  { slug: 'cloud-devops-security', title: 'Cloud Infrastructure & DevOps', category: 'Technology' },
+  { slug: 'qa-software-testing', title: 'Software Testing & QA (Automation, Security & Performance)', category: 'Quality' },
+  { slug: 'product-management', title: 'Product Management & UX Strategy', category: 'Strategy' },
+  { slug: 'project-management', title: 'Project Management & Agile Delivery', category: 'Strategy' },
+  { slug: 'business-analysis', title: 'Business Analysis & Process Mapping', category: 'Strategy' },
+  { slug: 'ui-ux-graphic-design', title: 'UI/UX & Graphic Design', category: 'Creative' },
+  { slug: 'video-creation-editing', title: 'Video Creation & Motion Graphics', category: 'Creative' },
   { slug: 'digital-marketing', title: 'Digital Marketing', category: 'Growth' },
   { slug: 'seo', title: 'Search Engine Optimization (SEO)', category: 'Growth' },
   { slug: 'performance-marketing', title: 'Performance Marketing', category: 'Growth' },
   { slug: 'social-media-marketing', title: 'Social Media Marketing', category: 'Growth' },
   { slug: 'customer-support', title: 'Customer Support Services', category: 'Operations' },
+  { slug: 'india-business-entry', title: 'India Business Entry & Local Head Office', category: 'Operations' },
   { slug: 'call-center', title: 'Call Center Operations', category: 'Operations' },
   { slug: 'bpo', title: 'Business Process Outsourcing (BPO)', category: 'Operations' },
   { slug: 'back-office', title: 'Back-Office Support', category: 'Operations' },
+];
+
+export interface ToolItem {
+  name: string;
+  category: 'Project & Agile' | 'Analytics & BI' | 'Game Engines' | 'AI & LLM' | 'QA & Security' | 'Operations & CRM' | 'Design & Creative' | 'Productivity & Docs';
+  badge: string;
+  iconKey: string;
+  description: string;
+}
+
+export interface TechLanguageItem {
+  name: string;
+  slug: string;
+  iconKey: string;
+  category: 'Languages' | 'Frontend & Mobile' | 'Backend & Cloud' | 'AI & Data' | 'Testing & Automation';
+  paradigm: string;
+  useCases: string[];
+  description: string;
+}
+
+export const PROGRAMMING_LANGUAGES_DATA: TechLanguageItem[] = [
+  {
+    name: 'TypeScript',
+    slug: 'typescript',
+    iconKey: 'typescript',
+    category: 'Languages',
+    paradigm: 'Static Typed, Multi-Paradigm',
+    useCases: ['Enterprise Web Apps', 'Full-Stack Node.js', 'Type-Safe APIs', 'Design Systems'],
+    description: 'Strict static type verification for maintainable, enterprise-scale client and server architectures with zero runtime type surprises.',
+  },
+  {
+    name: 'Python',
+    slug: 'python',
+    iconKey: 'python',
+    category: 'Languages',
+    paradigm: 'Object-Oriented, AI/ML Native',
+    useCases: ['RAG Vector Pipelines', 'FastAPI Backends', 'LLM Agent Orchestration', 'Data Pipelines'],
+    description: 'Industry-standard foundation for machine learning embeddings, LangChain automation, data science workflows, and microservices.',
+  },
+  {
+    name: 'Go (Golang)',
+    slug: 'golang',
+    iconKey: 'golang',
+    category: 'Languages',
+    paradigm: 'Concurrent, Compiled Systems',
+    useCases: ['Microservices', 'High-Throughput APIs', 'Cloud-Native Daemons', 'Distributed Queues'],
+    description: 'Sub-millisecond latency and effortless goroutine concurrency for hyper-scale backend APIs, message brokers, and cloud tooling.',
+  },
+  {
+    name: 'Rust',
+    slug: 'rust',
+    iconKey: 'rust',
+    category: 'Languages',
+    paradigm: 'Memory-Safe, High-Performance',
+    useCases: ['High-Frequency Engines', 'WASM Modules', 'Cryptography', 'Embedded Systems'],
+    description: 'Zero-cost abstractions with fearless memory safety without garbage collector overhead for performance-critical components.',
+  },
+  {
+    name: 'C# (.NET / Unity)',
+    slug: 'csharp',
+    iconKey: 'csharp',
+    category: 'Languages',
+    paradigm: 'Strongly Typed, Object-Oriented',
+    useCases: ['Unity 2D/3D Games', 'Enterprise .NET Core', 'WPF / Desktop', 'Game Physics'],
+    description: 'Core language powering Unity 2D/3D game mechanics, shader compute pipelines, and enterprise enterprise .NET Web APIs.',
+  },
+  {
+    name: 'JavaScript (ESNext)',
+    slug: 'javascript',
+    iconKey: 'javascript',
+    category: 'Languages',
+    paradigm: 'Event-Driven, Dynamic',
+    useCases: ['Browser Interactivity', 'Serverless Functions', 'Realtime WebSockets', 'Cross-Platform UI'],
+    description: 'Modern ES2024+ web runtime powering responsive browser frontends, Node/Bun runtimes, and real-time interactive dashboards.',
+  },
+  {
+    name: 'Java',
+    slug: 'java',
+    iconKey: 'java',
+    category: 'Languages',
+    paradigm: 'Object-Oriented, JVM',
+    useCases: ['Enterprise Backends', 'Spring Boot Microservices', 'Legacy Modernization', 'Banking Systems'],
+    description: 'Robust JVM ecosystem for mission-critical enterprise processing, high-concurrency Spring Boot APIs, and financial data pipelines.',
+  },
+  {
+    name: 'Kotlin',
+    slug: 'kotlin',
+    iconKey: 'kotlin',
+    category: 'Languages',
+    paradigm: 'Modern Multiplatform, Functional',
+    useCases: ['Native Android Apps', 'Jetpack Compose', 'KMP Cross-Platform', 'Modern JVM'],
+    description: 'Google’s preferred modern language for native Android mobile engineering with expressive syntax and seamless Java interoperability.',
+  },
+  {
+    name: 'Swift',
+    slug: 'swift',
+    iconKey: 'swift',
+    category: 'Languages',
+    paradigm: 'Protocol-Oriented, Compiled',
+    useCases: ['Native iOS Apps', 'SwiftUI', 'macOS & watchOS', 'High-Performance Mobile'],
+    description: 'Apple ecosystem native language for blazing-fast, buttery 120 FPS iOS, iPadOS, and macOS native applications with SwiftUI.',
+  },
+  {
+    name: 'Dart',
+    slug: 'dart',
+    iconKey: 'dart',
+    category: 'Languages',
+    paradigm: 'Client-Optimized, AOT/JIT',
+    useCases: ['Flutter Cross-Platform', 'Mobile & Desktop UIs', 'Consistent 60+ FPS', 'Single Codebase'],
+    description: 'Optimized client language powering unified Flutter mobile applications with hot-reload velocity and native compilation.',
+  },
+  {
+    name: 'SQL (PostgreSQL / RDS)',
+    slug: 'sql',
+    iconKey: 'postgresql',
+    category: 'Languages',
+    paradigm: 'Relational, Declarative',
+    useCases: ['Relational Data Modeling', 'Complex Joins & Aggregations', 'pgvector AI Search', 'ACID Transactions'],
+    description: 'High-integrity transactional databases with ACID compliance, custom indexing strategies, and pgvector semantic embeddings.',
+  },
+];
+
+export const TOOL_ECOSYSTEM: ToolItem[] = [
+  {
+    name: 'AI, LLMs & RAG',
+    category: 'AI & LLM',
+    badge: 'Vector DBs & Embeddings',
+    iconKey: 'langchain',
+    description: 'Retrieval-Augmented Generation (RAG), customized LLM agents, knowledge-base indexing (Pinecone, ChromaDB, pgvector), and LangChain orchestration.',
+  },
+  {
+    name: 'Game Development (Unity)',
+    category: 'Game Engines',
+    badge: '2D / 3D & WebGL',
+    iconKey: 'unity',
+    description: 'Cross-platform gameplay programming in Unity C#, physics tuning, mobile asset optimization, shader mechanics, and multiplayer architecture.',
+  },
+  {
+    name: 'Figma',
+    category: 'Design & Creative',
+    badge: 'UI/UX & Design Systems',
+    iconKey: 'figma',
+    description: 'Pixel-perfect wireframes, responsive mobile/desktop design systems, atomic component libraries, and interactive prototypes.',
+  },
+  {
+    name: 'Lucidchart',
+    category: 'Design & Creative',
+    badge: 'System Architecture',
+    iconKey: 'lucidchart',
+    description: 'Cloud infrastructure topologies, microservice architectures, database entity-relationship (ERD) diagrams, and BPMN process flows.',
+  },
+  {
+    name: 'Graphic Design & Branding',
+    category: 'Design & Creative',
+    badge: 'Adobe Creative Cloud',
+    iconKey: 'premiere',
+    description: 'Brand identity systems, vector illustrations, commercial marketing collateral, typography rules, and high-conversion ad creatives.',
+  },
+  {
+    name: 'Video Creator & Editor',
+    category: 'Design & Creative',
+    badge: 'Premiere & After Effects',
+    iconKey: 'premiere',
+    description: 'Product walkthrough demos, 2D/3D motion graphics, brand commercials, corporate explainer videos, and social reels/shorts.',
+  },
+  {
+    name: 'TestRail',
+    category: 'QA & Security',
+    badge: 'Test Case Management',
+    iconKey: 'testrail',
+    description: 'Centralized test repository, manual/automated run execution tracking, milestone traceability matrices, and QA audit reporting.',
+  },
+  {
+    name: 'Automation QA',
+    category: 'QA & Security',
+    badge: 'Playwright & Selenium',
+    iconKey: 'playwright',
+    description: 'Continuous integration regression suites, cross-browser automated pipelines, and API validation with Postman & Cypress.',
+  },
+  {
+    name: 'Cypress E2E Testing',
+    category: 'QA & Security',
+    badge: 'Component & End-to-End',
+    iconKey: 'cypress',
+    description: 'Fast, reliable real-browser end-to-end testing, visual regression passes, network stubbing, and developer-friendly continuous test pipelines.',
+  },
+  {
+    name: 'Performance & Load Testing',
+    category: 'QA & Security',
+    badge: 'JMeter & k6',
+    iconKey: 'jmeter',
+    description: 'Concurrent user stress testing, server threshold benchmarks, database query bottleneck diagnostics, and throughput analysis.',
+  },
+  {
+    name: 'Security & Vulnerability Testing',
+    category: 'QA & Security',
+    badge: 'OWASP Standards',
+    iconKey: 'selenium',
+    description: 'Static & dynamic application security testing (SAST/DAST), authentication auditing, penetration simulations, and compliance scans.',
+  },
+  {
+    name: 'Manual & Exploratory QA',
+    category: 'QA & Security',
+    badge: 'Device Lab Matrix',
+    iconKey: 'testrail',
+    description: 'In-depth exploratory test passes, user journey edge-case verification, accessibility (a11y) checks, and cross-device testing.',
+  },
+  {
+    name: 'Jira Software',
+    category: 'Project & Agile',
+    badge: 'Atlassian Suite',
+    iconKey: 'jira',
+    description: 'Enterprise Scrum & Kanban sprint planning, release burn-down charts, velocity tracking, and automated issue triage rules.',
+  },
+  {
+    name: 'Confluence',
+    category: 'Project & Agile',
+    badge: 'Atlassian Knowledge',
+    iconKey: 'confluence',
+    description: 'Living product requirements documents (PRDs), engineering architectural decision records (ADRs), and QA acceptance runbooks.',
+  },
+  {
+    name: 'Miro',
+    category: 'Project & Agile',
+    badge: 'Visual Collaboration',
+    iconKey: 'miro',
+    description: 'User story mapping, customer journey blueprinting, BPMN workflow diagrams, and interactive sprint retrospective whiteboards.',
+  },
+  {
+    name: 'Asana',
+    category: 'Project & Agile',
+    badge: 'Work Management',
+    iconKey: 'asana',
+    description: 'Cross-departmental initiative tracking, dependency timelines, workload balancing, and executive roadmap reporting.',
+  },
+  {
+    name: 'Monday.com',
+    category: 'Project & Agile',
+    badge: 'Work OS',
+    iconKey: 'monday',
+    description: 'Visual client progress dashboards, custom SLA escalation webhooks, and streamlined operational ticket pipelines.',
+  },
+  {
+    name: 'Trello',
+    category: 'Project & Agile',
+    badge: 'Lightweight Kanban',
+    iconKey: 'trello',
+    description: 'Visual sprint pipelines, transparent task management, power-up integrations, and client deliverable boards.',
+  },
+  {
+    name: 'Microsoft Power BI',
+    category: 'Analytics & BI',
+    badge: 'Enterprise BI',
+    iconKey: 'powerbi',
+    description: 'Custom DAX business intelligence models, interactive executive KPI cockpits, automated data warehousing, and scheduled refresh flows.',
+  },
+  {
+    name: 'Mixpanel',
+    category: 'Analytics & BI',
+    badge: 'Product Analytics',
+    iconKey: 'mixpanel',
+    description: 'Deep funnel conversion analysis, user cohort retention curves, event tracking taxonomy, and in-app behavioral metrics.',
+  },
+  {
+    name: 'Microsoft Excel & Google Sheets',
+    category: 'Productivity & Docs',
+    badge: 'Advanced Modeling',
+    iconKey: 'excel',
+    description: 'Financial models, complex formulas, automated macros/VBA, pivot tables, spreadsheet cleaning, and data reconciliation.',
+  },
+  {
+    name: 'Google Docs & Microsoft Word',
+    category: 'Productivity & Docs',
+    badge: 'Executive Documentation',
+    iconKey: 'word',
+    description: 'Formal technical whitepapers, RFP tender documentation, corporate standard operating procedures (SOPs), and service agreements.',
+  },
+  {
+    name: 'PowerPoint & Google Slides',
+    category: 'Productivity & Docs',
+    badge: 'High-Impact Decks',
+    iconKey: 'powerpoint',
+    description: 'Investor pitch decks, executive steering committee slides, sales capability decks, and conference keynote visual designs.',
+  },
+  {
+    name: 'Zoho One & Zoho Suite',
+    category: 'Operations & CRM',
+    badge: 'CRM & ERP Ecosystem',
+    iconKey: 'zoho',
+    description: 'End-to-end sales pipeline automation, custom Zoho Creator apps, Zoho Desk ticketing workflows, and Zoho Analytics dashboards.',
+  },
 ];
 
 export const INDUSTRIES_DATA: IndustryItem[] = [

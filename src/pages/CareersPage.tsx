@@ -15,35 +15,35 @@ export default function CareersPage({ onNavigate }: CareersPageProps) {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
       <div className="space-y-4">
-        <div className="text-xs font-bold text-brand-blue uppercase tracking-wider">
+        <div className="text-xs font-bold text-brand-blue dark:text-brand-cyan uppercase tracking-wider">
           Join VoiceSpace
         </div>
-        <h1 className="text-4xl font-extrabold text-navy-900 leading-tight">
+        <h1 className="text-4xl font-extrabold text-navy-900 dark:text-white leading-tight">
           Work With Us
         </h1>
-        <p className="text-base text-slate-body leading-relaxed">
+        <p className="text-base text-slate-body dark:text-slate-300 leading-relaxed">
           We value clean code, clear communication, dependable work ethic, and personal growth. Our teams build modern software and support international organizations.
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {perks.map((p, idx) => (
-          <div key={idx} className="p-6 rounded-2xl bg-white border border-slate-line space-y-2 shadow-xs">
-            <h3 className="font-bold text-navy-900 text-sm">{p.title}</h3>
-            <p className="text-xs text-slate-body leading-relaxed">{p.desc}</p>
+          <div key={idx} className="p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-slate-line dark:border-slate-800 space-y-2 shadow-xs transition-colors">
+            <h3 className="font-bold text-navy-900 dark:text-white text-sm">{p.title}</h3>
+            <p className="text-xs text-slate-body dark:text-slate-300 leading-relaxed">{p.desc}</p>
           </div>
         ))}
       </div>
 
-      <div className="p-8 rounded-3xl bg-surface-alt border border-slate-line space-y-4">
-        <h2 className="text-xl font-bold text-navy-900">Current Job Openings</h2>
-        <p className="text-sm text-slate-body leading-relaxed">
+      <div className="p-8 rounded-3xl bg-surface-alt dark:bg-[#0F172A] border border-slate-line dark:border-slate-800 space-y-4 transition-colors">
+        <h2 className="text-xl font-bold text-navy-900 dark:text-white">Current Job Openings</h2>
+        <p className="text-sm text-slate-body dark:text-slate-300 leading-relaxed">
           There are currently no active public vacancies posted. However, we regularly review expressions of interest from senior full-stack software engineers, support specialists, and performance marketers.
         </p>
         <div className="pt-2">
           <button
             onClick={() => onNavigate('/contact')}
-            className="inline-flex items-center text-sm font-semibold text-brand-blue hover:underline cursor-pointer"
+            className="inline-flex items-center text-sm font-semibold text-brand-blue dark:text-brand-cyan hover:underline cursor-pointer"
           >
             Submit an expression of interest &rarr;
           </button>

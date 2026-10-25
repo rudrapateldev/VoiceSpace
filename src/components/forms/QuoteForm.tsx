@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { SERVICES_LIST } from '../../lib/constants';
 import { validateQuoteForm } from '../../lib/validations';
 import { QuoteFormData } from '../../types';
-import { Loader2, CheckCircle2, AlertCircle, FileText, Printer, ArrowRight } from 'lucide-react';
+import { Loader2, CheckCircle2, AlertCircle, FileText, Printer, ArrowRight, MessageSquare } from 'lucide-react';
 
 interface QuoteFormProps {
   initialService?: string;
@@ -90,62 +90,73 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
   return (
     <div className="space-y-8">
       {submittedQuote ? (
-        <div className="bg-white border border-slate-line rounded-2xl p-8 sm:p-12 shadow-sm space-y-6">
-          <div className="flex items-center gap-3 text-emerald-600">
+        <div className="bg-white dark:bg-[#0F172A] border border-slate-line dark:border-slate-800 rounded-2xl p-8 sm:p-12 shadow-sm space-y-6 transition-colors">
+          <div className="flex items-center gap-3 text-emerald-600 dark:text-emerald-400">
             <CheckCircle2 className="w-8 h-8 shrink-0" />
             <div>
-              <h3 className="text-xl font-bold text-navy-900">Proposal Request Verified</h3>
-              <p className="text-xs text-slate-body">Reference: {submittedQuote.referenceNumber} · {submittedQuote.submittedAt}</p>
+              <h3 className="text-xl font-bold text-navy-900 dark:text-white">Proposal Request Verified</h3>
+              <p className="text-xs text-slate-body dark:text-slate-400">Reference: {submittedQuote.referenceNumber} · {submittedQuote.submittedAt}</p>
             </div>
           </div>
 
-          <div className="p-6 rounded-xl bg-surface-alt border border-slate-line/80 space-y-4">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-navy-900">
+          <div className="p-6 rounded-xl bg-surface-alt dark:bg-slate-800/60 border border-slate-line/80 dark:border-slate-700/80 space-y-4">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-navy-900 dark:text-white">
               Quotation Summary
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               <div>
-                <span className="text-slate-400 block">Contact Name</span>
-                <span className="font-semibold text-navy-900">{submittedQuote.data.fullName}</span>
+                <span className="text-slate-400 dark:text-slate-500 block">Contact Name</span>
+                <span className="font-semibold text-navy-900 dark:text-slate-100">{submittedQuote.data.fullName}</span>
               </div>
               <div>
-                <span className="text-slate-400 block">Corporate Email</span>
-                <span className="font-semibold text-navy-900">{submittedQuote.data.email}</span>
+                <span className="text-slate-400 dark:text-slate-500 block">Corporate Email</span>
+                <span className="font-semibold text-navy-900 dark:text-slate-100">{submittedQuote.data.email}</span>
               </div>
               <div>
-                <span className="text-slate-400 block">Target Service</span>
-                <span className="font-semibold text-brand-blue">{submittedQuote.data.service}</span>
+                <span className="text-slate-400 dark:text-slate-500 block">Target Service</span>
+                <span className="font-semibold text-brand-blue dark:text-blue-400">{submittedQuote.data.service}</span>
               </div>
               <div>
-                <span className="text-slate-400 block">Engagement Model</span>
-                <span className="font-semibold text-navy-900">{submittedQuote.data.engagementModel}</span>
+                <span className="text-slate-400 dark:text-slate-500 block">Engagement Model</span>
+                <span className="font-semibold text-navy-900 dark:text-slate-100">{submittedQuote.data.engagementModel}</span>
               </div>
               <div>
-                <span className="text-slate-400 block">Estimated Timeline</span>
-                <span className="font-semibold text-navy-900">{submittedQuote.data.timeline}</span>
+                <span className="text-slate-400 dark:text-slate-500 block">Estimated Timeline</span>
+                <span className="font-semibold text-navy-900 dark:text-slate-100">{submittedQuote.data.timeline}</span>
               </div>
               <div>
-                <span className="text-slate-400 block">Planned Budget Bracket</span>
-                <span className="font-semibold text-navy-900">{submittedQuote.data.budgetRange}</span>
+                <span className="text-slate-400 dark:text-slate-500 block">Planned Budget Bracket</span>
+                <span className="font-semibold text-navy-900 dark:text-slate-100">{submittedQuote.data.budgetRange}</span>
               </div>
             </div>
 
-            <div className="pt-2 border-t border-slate-line text-xs">
-              <span className="text-slate-400 block mb-1">Scope Description</span>
-              <p className="text-navy-900 leading-relaxed bg-white p-3 rounded-lg border border-slate-line">
+            <div className="pt-2 border-t border-slate-line dark:border-slate-700 text-xs">
+              <span className="text-slate-400 dark:text-slate-500 block mb-1">Scope Description</span>
+              <p className="text-navy-900 dark:text-slate-200 leading-relaxed bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-line dark:border-slate-700">
                 {submittedQuote.data.projectScope}
               </p>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-2 no-print">
+          <div className="flex flex-wrap gap-3 pt-2 no-print">
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-line text-xs font-semibold text-navy-900 hover:bg-surface-alt transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-line dark:border-slate-700 text-xs font-semibold text-navy-900 dark:text-slate-200 hover:bg-surface-alt dark:hover:bg-slate-800 transition-colors cursor-pointer"
             >
               <Printer className="w-4 h-4" />
-              <span>Print / Save Proposal Slip</span>
+              <span>Print / Save Slip</span>
             </button>
+            <a
+              href={`https://wa.me/919289590900?text=${encodeURIComponent(
+                `Hello VoiceSpace India team, I configured a quote proposal (Ref: ${submittedQuote.referenceNumber}) for ${submittedQuote.data.service} (Budget: ${submittedQuote.data.budgetRange}, Timeline: ${submittedQuote.data.timeline}). I would like to review this with your team!`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-xs font-semibold text-white transition-colors cursor-pointer shadow-xs"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>Discuss on WhatsApp</span>
+            </a>
             <button
               onClick={() => setSubmittedQuote(null)}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-blue text-xs font-semibold text-white hover:bg-blue-600 transition-colors cursor-pointer"
@@ -158,12 +169,12 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="bg-white border border-slate-line rounded-2xl p-6 sm:p-10 shadow-xs space-y-6"
+          className="bg-white dark:bg-[#0F172A] border border-slate-line dark:border-slate-800 rounded-2xl p-6 sm:p-10 shadow-xs space-y-6 transition-colors"
         >
           {errors.length > 0 && (
-            <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs space-y-1">
+            <div className="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-300 text-xs space-y-1">
               <div className="flex items-center gap-2 font-semibold">
-                <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                <AlertCircle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
                 <span>Please complete the required specifications:</span>
               </div>
               <ul className="list-disc pl-5 space-y-0.5">
@@ -176,7 +187,7 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="quoteFullName" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quoteFullName" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Your Full Name <span className="text-rose-500">*</span>
               </label>
               <input
@@ -187,12 +198,12 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="Alex Smith"
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
               />
             </div>
 
             <div>
-              <label htmlFor="quoteEmail" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quoteEmail" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Work Email Address <span className="text-rose-500">*</span>
               </label>
               <input
@@ -203,12 +214,12 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="alex@enterprise.com"
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
               />
             </div>
 
             <div>
-              <label htmlFor="quoteCompany" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quoteCompany" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Organization / Company
               </label>
               <input
@@ -218,12 +229,12 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 value={formData.companyName}
                 onChange={handleChange}
                 placeholder="Acme Global Inc."
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
               />
             </div>
 
             <div>
-              <label htmlFor="quotePhone" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quotePhone" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Phone Number
               </label>
               <input
@@ -233,14 +244,14 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+1 (555) 012-3456"
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div>
-              <label htmlFor="quoteServiceSelect" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quoteServiceSelect" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Primary Service <span className="text-rose-500">*</span>
               </label>
               <select
@@ -248,10 +259,10 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
               >
                 {SERVICES_LIST.map((s) => (
-                  <option key={s.slug} value={s.title}>
+                  <option key={s.slug} value={s.title} className="dark:bg-slate-800 dark:text-white">
                     {s.title}
                   </option>
                 ))}
@@ -259,7 +270,7 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
             </div>
 
             <div>
-              <label htmlFor="quoteEngagementSelect" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quoteEngagementSelect" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Engagement Model
               </label>
               <select
@@ -267,16 +278,16 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 name="engagementModel"
                 value={formData.engagementModel}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
               >
-                <option value="Project-Based">Project-Based Delivery</option>
-                <option value="Dedicated Team">Dedicated Remote Team</option>
-                <option value="Ongoing Managed Services">Managed Services (Retainer)</option>
+                <option value="Project-Based" className="dark:bg-slate-800 dark:text-white">Project-Based Delivery</option>
+                <option value="Dedicated Team" className="dark:bg-slate-800 dark:text-white">Dedicated Remote Team</option>
+                <option value="Ongoing Managed Services" className="dark:bg-slate-800 dark:text-white">Managed Services (Retainer)</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="quoteTimelineSelect" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quoteTimelineSelect" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Target Timeline
               </label>
               <select
@@ -284,19 +295,19 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 name="timeline"
                 value={formData.timeline}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
               >
-                <option value="Immediate (< 1 month)">Immediate (&lt; 1 month)</option>
-                <option value="Within 1–2 months">Within 1–2 months</option>
-                <option value="Within 3–6 months">Within 3–6 months</option>
-                <option value="Long-Term / Planning">Long-Term / Planning</option>
+                <option value="Immediate (< 1 month)" className="dark:bg-slate-800 dark:text-white">Immediate (&lt; 1 month)</option>
+                <option value="Within 1–2 months" className="dark:bg-slate-800 dark:text-white">Within 1–2 months</option>
+                <option value="Within 3–6 months" className="dark:bg-slate-800 dark:text-white">Within 3–6 months</option>
+                <option value="Long-Term / Planning" className="dark:bg-slate-800 dark:text-white">Long-Term / Planning</option>
               </select>
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="quoteBudgetSelect" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quoteBudgetSelect" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Estimated Budget Bracket
               </label>
               <select
@@ -304,18 +315,18 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 name="budgetRange"
                 value={formData.budgetRange}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
               >
-                <option value="< $5,000">&lt; $5,000 (Small sprint / pilot)</option>
-                <option value="$5,000 – $15,000">$5,000 – $15,000 (Standard MVP / project)</option>
-                <option value="$15,000 – $35,000">$15,000 – $35,000 (Multi-month architecture)</option>
-                <option value="$35,000+">$35,000+ (Enterprise scale / full team)</option>
-                <option value="Flexible / Needs Guidance">Flexible / Seeking Guidance</option>
+                <option value="< $5,000" className="dark:bg-slate-800 dark:text-white">&lt; $5,000 (Small sprint / pilot)</option>
+                <option value="$5,000 – $15,000" className="dark:bg-slate-800 dark:text-white">$5,000 – $15,000 (Standard MVP / project)</option>
+                <option value="$15,000 – $35,000" className="dark:bg-slate-800 dark:text-white">$15,000 – $35,000 (Multi-month architecture)</option>
+                <option value="$35,000+" className="dark:bg-slate-800 dark:text-white">$35,000+ (Enterprise scale / full team)</option>
+                <option value="Flexible / Needs Guidance" className="dark:bg-slate-800 dark:text-white">Flexible / Seeking Guidance</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="quoteCoverageSelect" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+              <label htmlFor="quoteCoverageSelect" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                 Coverage / Operating Hours
               </label>
               <select
@@ -323,17 +334,17 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
                 name="coverageHours"
                 value={formData.coverageHours}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
+                className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm cursor-pointer"
               >
-                <option value="Standard Business Hours (8/5)">Standard Business Hours (8/5)</option>
-                <option value="Extended Coverage (16/6)">Extended Shifts (16/6)</option>
-                <option value="Round-the-Clock (24/7/365)">Round-the-Clock (24/7/365)</option>
+                <option value="Standard Business Hours (8/5)" className="dark:bg-slate-800 dark:text-white">Standard Business Hours (8/5)</option>
+                <option value="Extended Coverage (16/6)" className="dark:bg-slate-800 dark:text-white">Extended Shifts (16/6)</option>
+                <option value="Round-the-Clock (24/7/365)" className="dark:bg-slate-800 dark:text-white">Round-the-Clock (24/7/365)</option>
               </select>
             </div>
           </div>
 
           <div>
-            <label htmlFor="quoteScopeText" className="block text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+            <label htmlFor="quoteScopeText" className="block text-xs font-bold text-navy-900 dark:text-slate-200 uppercase tracking-wider mb-2">
               Project Scope & Requirements <span className="text-rose-500">*</span>
             </label>
             <textarea
@@ -344,7 +355,7 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
               value={formData.projectScope}
               onChange={handleChange}
               placeholder="Please describe technical specifications, business goals, team size expectations, or current bottlenecks..."
-              className="w-full px-4 py-3 rounded-xl border border-slate-line bg-surface-alt/40 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
+              className="w-full px-4 py-3 rounded-xl border border-slate-line dark:border-slate-700 bg-surface-alt/40 dark:bg-slate-800 text-navy-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm transition-all"
             />
           </div>
 
@@ -355,9 +366,9 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
               type="checkbox"
               checked={formData.consentGiven}
               onChange={handleChange}
-              className="h-4 w-4 mt-0.5 rounded border-slate-line text-brand-blue focus:ring-brand-blue cursor-pointer"
+              className="h-4 w-4 mt-0.5 rounded border-slate-line dark:border-slate-700 text-brand-blue focus:ring-brand-blue cursor-pointer"
             />
-            <label htmlFor="quoteConsentCheck" className="text-xs text-slate-body leading-normal cursor-pointer">
+            <label htmlFor="quoteConsentCheck" className="text-xs text-slate-body dark:text-slate-400 leading-normal cursor-pointer">
               I understand this estimate is subject to formal statement of work validation and agree to VoiceSpace's Privacy Policy.
             </label>
           </div>
@@ -365,7 +376,7 @@ export default function QuoteForm({ initialService }: QuoteFormProps) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 px-6 rounded-xl text-sm font-semibold bg-navy-900 text-white hover:bg-navy-800 transition-colors flex items-center justify-center cursor-pointer disabled:opacity-50 shadow-xs"
+            className="w-full py-3.5 px-6 rounded-xl text-sm font-semibold bg-brand-blue hover:bg-blue-600 text-white transition-all flex items-center justify-center cursor-pointer disabled:opacity-50 shadow-md active:scale-[0.99]"
           >
             {loading ? (
               <>

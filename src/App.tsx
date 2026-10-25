@@ -8,6 +8,8 @@ import AnnouncementBar from './components/layout/AnnouncementBar';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import AwsDeploymentModal from './components/deployment/AwsDeploymentModal';
+import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
+import { ThemeProvider } from './context/ThemeContext';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -149,12 +151,15 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white text-navy-800 antialiased selection:bg-brand-blue selection:text-white">
-      <AnnouncementBar onNavigate={navigateTo} />
-      <Navbar currentPath={currentPath} onNavigate={navigateTo} />
-      <main className="grow">{renderRoute()}</main>
-      <Footer onNavigate={navigateTo} onOpenAwsModal={() => setAwsModalOpen(true)} />
-      <AwsDeploymentModal isOpen={awsModalOpen} onClose={() => setAwsModalOpen(false)} />
-    </div>
+    <ThemeProvider>
+      <div className="flex flex-col min-h-screen bg-white dark:bg-[#0A0F1D] text-navy-800 dark:text-slate-100 antialiased selection:bg-brand-blue selection:text-white transition-colors duration-200">
+        <AnnouncementBar onNavigate={navigateTo} />
+        <Navbar currentPath={currentPath} onNavigate={navigateTo} />
+        <main className="grow">{renderRoute()}</main>
+        <Footer onNavigate={navigateTo} onOpenAwsModal={() => setAwsModalOpen(true)} />
+        <AwsDeploymentModal isOpen={awsModalOpen} onClose={() => setAwsModalOpen(false)} />
+        <FloatingWhatsApp />
+      </div>
+    </ThemeProvider>
   );
 }
